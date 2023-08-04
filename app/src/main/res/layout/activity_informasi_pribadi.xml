@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.InformasiPribadiActivity"
+    android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:id="@+id/informasipribadi_relativelayout_1"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="29dp"
+        android:layout_marginTop="33dp"
+        >
+
+    <ImageButton
+        android:id="@+id/informasipribadi_button_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/vector"
+        android:backgroundTint="@android:color/transparent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Informasi pribadi"
+        android:fontFamily="@font/roboto_w500_medium"
+        android:textSize="18sp"
+        android:letterSpacing="0.02"
+        android:textColor="@color/black"
+        />
+
+    <ImageButton
+        android:id="@+id/informasipribadi_button_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/green_check"
+        android:backgroundTint="@android:color/transparent"
+        />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/informasipribadi_linearlayout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/informasipribadi_relativelayout_1"
+        android:layout_marginTop="36dp"
+        android:layout_marginHorizontal="36dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="Saya seorang"
+            android:fontFamily="@font/roboto_w400_regular"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:letterSpacing="0.08"/>
+
+        <RadioGroup
+            android:id="@+id/informasipribadi_radiogrup_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/outlinedbox_inputlayout"
+            android:orientation="horizontal"
+            android:layout_weight="6">
+            <RadioButton
+                android:id="@+id/informasipribadi_radiobutton_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_w400_regular"
+                android:paddingHorizontal="12dp"
+                android:text="Laki-Laki"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:button="@null"/>
+
+            <RadioButton
+                android:id="@+id/informasipribadi_radiobutton_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="12dp"
+                android:text="Perempuan"
+                android:fontFamily="@font/poppins_w400_regular"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:button="@null"/>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/informasipribadi_relativelayout_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/informasipribadi_linearlayout_1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginTop="24dp">
+
+        <LinearLayout
+            android:id="@+id/informasipribadi_linearlayout_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentLeft="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_w400_regular"
+                android:letterSpacing="0.08"
+                android:text="Tinggi"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/outlinedbox_inputlayout">
+
+                <EditText
+                    android:id="@+id/informasipribadi_edittext_height"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_w400_regular"
+                    android:textSize="12sp"
+                    android:inputType="number"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cm"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/roboto_w400_regular"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Usia"
+                android:fontFamily="@font/roboto_w400_regular"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:letterSpacing="0.08"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/outlinedbox_inputlayout">
+
+                <EditText
+                    android:id="@+id/informasipribadi_edittext_age"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_w400_regular"
+                    android:textSize="12sp"
+                    android:inputType="number"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="th"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/roboto_w400_regular"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/informasipribadi_linearlayout_height">
+
+            <TextView
+                android:id="@+id/biodata_textview_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Berat badan"
+                android:fontFamily="@font/roboto_w400_regular"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:letterSpacing="0.08"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/outlinedbox_inputlayout">
+
+                <EditText
+                    android:id="@+id/informasipribadi_edittext_weight"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_w400_regular"
+                    android:textSize="12sp"
+                    android:inputType="number"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="kg"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/roboto_w400_regular"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/informasipribadi_textview_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/informasipribadi_relativelayout_2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/roboto_w400_regular"
+        android:letterSpacing="0.08"
+        android:text="Body Mass Index (BMI)"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/informasipribadi_slider_bmi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/informasipribadi_textview_4"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:value="0"
+        android:valueFrom="0"
+        android:valueTo="70"
+        app:trackColorInactive="#3300AA13"
+        app:trackColorActive="@color/app_green"
+        app:thumbRadius="0dp"
+        app:haloRadius="0dp"
+        app:tickVisible="false"
+        app:labelBehavior="floating"
+        app:trackHeight="9dp"
+        android:enabled="false"
+        />
+
+    <TextView
+        android:id="@+id/informasipribadi_textview_bmilabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/informasipribadi_slider_bmi"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="BMI : 22.5 (ideal)"
+        android:layout_marginLeft="36dp"
+        android:fontFamily="@font/poppins_w400_regular"
+        android:textColor="#99000000"
+        android:textSize="9sp"
+        />
+
+    <TextView
+        android:id="@+id/informasipribadi_textview_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/informasipribadi_textview_bmilabel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/roboto_w400_regular"
+        android:letterSpacing="0.08"
+        android:text="Tingkat aktivitas"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/informasipribadi_linearlayout_aktivitas"
+        app:layout_constraintTop_toBottomOf="@id/informasipribadi_textview_5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="36dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/outlinedbox_inputlayout"
+        android:orientation="horizontal"
+        android:layout_weight="9">
+
+        <LinearLayout
+            android:id="@+id/informasipribadi_linearlayout_aktivitastidakada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="12dp"
+            android:gravity="center"
+            android:layout_weight="3">
+
+            <TextView
+                android:id="@+id/informasipribadi_textview_tidakada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tidak ada"
+                android:fontFamily="@font/poppins_w400_regular"
+                android:textSize="13sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(tidak berolahraga)"
+                android:fontFamily="@font/poppins_w400_regular"
+                android:textSize="8sp"
+                android:textColor="#99000000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/informasipribadi_linearlayout_aktivitassedang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="12dp"
+            android:gravity="center"
+            android:layout_weight="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sedang"
+                android:fontFamily="@font/poppins_w400_regular"
+                android:textSize="13sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(3x-4x/minggu)"
+                android:fontFamily="@font/poppins_w400_regular"
+                android:textSize="8sp"
+                android:textColor="#99000000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/informasipribadi_linearlayout_aktivitasaktif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="12dp"
+            android:gravity="center"
+            android:layout_weight="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aktif"
+                android:fontFamily="@font/poppins_w400_regular"
+                android:textSize="13sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(5x+/minggu)"
+                android:fontFamily="@font/poppins_w400_regular"
+                android:textSize="8sp"
+                android:textColor="#99000000" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

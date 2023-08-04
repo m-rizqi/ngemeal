@@ -1,0 +1,82 @@
+  {
+    "breakfast": [
+      {
+        "name": "Sereal Gandum dengan Susu",
+        "image": "https://cdn.hellosehat.com/wp-content/uploads/2017/12/makan-gandum-utuh.jpg",
+        "energy": 340,
+        "carb": 72,
+        "fat": 2.5,
+        "protein": 13.2
+      },
+      {
+        "name": "Jus Alpukat",
+        "image": "https://selerasa.com/wp-content/uploads/2015/12/images_daging_ayam-goreng.jpg",
+        "energy": 278,
+        "carb": 17,
+        "fat": 29,
+        "protein": 4
+      }
+    ],
+    "lunch": [
+      {
+        "name": "Nasi putih",
+        "image": "https://cdnt.orami.co.id/unsafe/cdn-cas.orami.co.id/parenting/images/kalori-nasi-putih.width-800.jpegquality-80.jpg",
+        "energy": 204,
+        "carb": 44,
+        "fat": 0.4,
+        "protein": 4.2
+      },
+      {
+        "name": "Ayam Goreng Kalasan",
+        "image": "https://selerasa.com/wp-content/uploads/2015/12/images_daging_ayam-goreng.jpg",
+        "energy": 360,
+        "carb": 14.5,
+        "fat": 10.7,
+        "protein": 21.9
+      },
+      {
+        "name": "Es Teh",
+        "image": "https://nilaigizi.com/assets/images/produk/produk_1578041377.jpg",
+        "energy": 90,
+        "carb": 23,
+        "fat": 0,
+        "protein": 0.2
+      }
+    ],
+    "dinner": [
+      {
+        "name": "Nasi putih",
+        "image": "https://cdnt.orami.co.id/unsafe/cdn-cas.orami.co.id/parenting/images/kalori-nasi-putih.width-800.jpegquality-80.jpg",
+        "energy": 204,
+        "carb": 44,
+        "fat": 0.4,
+        "protein": 4.2
+      },
+      {
+        "name": "Steak Daging Sapi",
+        "image": "https://akcdn.detik.net.id/community/media/visual/2019/03/29/1bd885b1-ac28-46e5-81a4-5d200cf7290f_43.jpeg?w=480",
+        "energy": 252,
+        "carb": 0,
+        "fat": 15,
+        "protein": 27.3
+      }
+    ],
+    "snack": [
+      {
+        "name": "Buah Pisang",
+        "image": "https://asset-a.grid.id//crop/0x0:0x0/700x465/photo/bobofoto/original/22342_pisang.jpg",
+        "energy": 105,
+        "carb": 62,
+        "fat": 0.3,
+        "protein": 1.3
+      },
+      {
+        "name": "Yogurt Chimory",
+        "image": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/MTA-3170200/cimory_cimory-yogurt-drink-blueberry--250-ml-_full04.jpg",
+        "energy": 50,
+        "carb": 10,
+        "fat": 0,
+        "protein": 2
+      }
+    ]
+  }

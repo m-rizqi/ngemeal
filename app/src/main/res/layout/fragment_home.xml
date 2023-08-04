@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.view.dashboard.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/homefragment_relativelayout_relative1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="48dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="24dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/dashboard_textview_textview1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Halo !"
+                android:fontFamily="@font/roboto_w500_medium"
+                android:textSize="36sp"
+                android:textColor="@color/black"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"/>
+
+            <ImageButton
+                android:id="@+id/dashboard_imagebutton_userprofile"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/userprofile_dashboard_shape"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_person_outline_24"/>
+
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/compass_scrollview_sl1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/homefragment_relativelayout_relative1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="24dp"
+            android:paddingVertical="5dp"
+            android:scrollbars="none"
+            android:layout_marginTop="24dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/compass_cardview_circleSun"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/greencircle_date_shape"
+                    >
+                    <TextView
+                        android:id="@+id/compass_textview_Sun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Min"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins_w400_regular"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/compass_cardview_circleMon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/greystrokecircel_date_shape"
+                    android:layout_marginLeft="12dp">
+                    <TextView
+                        android:id="@+id/compass_textview_Mon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sen"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins_w400_regular"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/compass_cardview_circleTues"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/greystrokecircel_date_shape"
+                    android:layout_marginLeft="12dp">
+                    <TextView
+                        android:id="@+id/compass_textview_Tues"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sel"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/poppins_w400_regular"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/compass_cardview_circleWed"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/greystrokecircel_date_shape"
+                    android:layout_marginLeft="12dp">
+                    <TextView
+                        android:id="@+id/compass_textview_Wed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rab"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/poppins_w400_regular"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/compass_cardview_circleThurs"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/greystrokecircel_date_shape"
+                    android:layout_marginLeft="12dp">
+                    <TextView
+                        android:id="@+id/compass_textview_Thurs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kam"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/poppins_w400_regular"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/compass_cardview_circleFri"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/greystrokecircel_date_shape"
+                    android:layout_marginLeft="12dp">
+                    <TextView
+                        android:id="@+id/compass_textview_Fri"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jum"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/poppins_w400_regular"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/compass_cardview_circleSat"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/greystrokecircel_date_shape"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="100dp">
+                    <TextView
+                        android:id="@+id/compass_textview_Sat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sab"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/poppins_w400_regular"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/compass_textview_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/compass_scrollview_sl1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="28dp"
+            android:text="Jenis Makanan"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_w500_medium"
+            android:textSize="14sp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/compass_relativelayout_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/compass_textview_1"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="5dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/compass_cardview_sarapan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="@drawable/outlinedbox_cardview"
+                app:cardBackgroundColor="@color/app_white"
+                android:elevation="0dp"
+                app:cardElevation="0dp"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="28dp"
+                    android:layout_marginLeft="24dp"
+                    android:text="Sarapan"
+                    android:fontFamily="@font/poppins_w400_regular"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sarapan_image"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/compass_relativelayout_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/compass_relativelayout_1"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="5dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/compass_cardview_makansiang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/app_green"
+                android:layout_centerVertical="true"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="28dp"
+                    android:layout_marginLeft="24dp"
+                    android:text="Makan siang"
+                    android:fontFamily="@font/poppins_w400_regular"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/makansiang_image"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/compass_relativelayout_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/compass_relativelayout_2"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="5dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/compass_cardview_makanmalam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="@drawable/outlinedbox_cardview"
+                android:elevation="0dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/app_white"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="28dp"
+                    android:layout_marginLeft="24dp"
+                    android:text="Makan malam"
+                    android:fontFamily="@font/poppins_w400_regular"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/makanmalam_image"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/compass_relativelayout_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/compass_relativelayout_3"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="5dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/compass_cardview_snack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="@drawable/outlinedbox_cardview"
+                app:cardBackgroundColor="@color/app_white"
+                android:elevation="0dp"
+                app:cardElevation="0dp"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="28dp"
+                    android:layout_marginLeft="24dp"
+                    android:text="Camilan"
+                    android:fontFamily="@font/poppins_w400_regular"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/snack_image"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"/>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

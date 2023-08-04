@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.team.gemastik_mealplanner">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GemastikMealPlanner"
+        >
+        <activity android:name=".ui.view.TrackRecordActivity" android:theme="@style/Theme.MaterialComponents.NoActionBar"></activity>
+        <activity
+            android:name=".ui.view.InformasiPribadiActivity"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
+        <activity
+            android:name=".ui.view.AkunSayaActivity"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
+        <activity
+            android:name=".ui.view.UserProfileActivity"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
+        <activity
+            android:name=".ui.view.FoodDetailActivity"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
+        <activity
+            android:name=".ui.view.screening.NutritionCalculatorActivity"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
+        <activity
+            android:name=".ui.view.screening.SettingNutritionTargetActivity"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
+        <activity
+            android:name=".ui.view.screening.BiodataActivity"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
+        <activity
+            android:name=".ui.view.dashboard.DashboardActivity"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
+        <activity
+            android:name=".ui.view.screening.NutritionTargetActivity"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
+        <activity android:name=".ui.view.MainActivity" />
+        <activity
+            android:name=".ui.view.auth.AuthentificationActivity"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
+        <activity
+            android:name=".ui.view.screening.FoodScreeningActivity"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
+        <activity
+            android:name=".ui.view.OnBoardingActivity"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

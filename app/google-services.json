@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "806344159688",
+    "firebase_url": "https://ngemeal-b7948-default-rtdb.firebaseio.com",
+    "project_id": "ngemeal-b7948",
+    "storage_bucket": "ngemeal-b7948.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:806344159688:android:3b4cc21d54cdc61b61d0fd",
+        "android_client_info": {
+          "package_name": "com.team.gemastik_mealplanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "806344159688-solc7p9tk9upnm2i6330a3vhjdvb1r01.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.team.gemastik_mealplanner",
+            "certificate_hash": "7042fb6aa7af43eb4e9ce3e4234ec39e8a8d0316"
+          }
+        },
+        {
+          "client_id": "806344159688-ef9qcmg618d2f1n3ghr5l5f4ppsesuhc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0D68Eu3PRqTmXg3I66W1bBvBIHQKDeCE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "806344159688-ef9qcmg618d2f1n3ghr5l5f4ppsesuhc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

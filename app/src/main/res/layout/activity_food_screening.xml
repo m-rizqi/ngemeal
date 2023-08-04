@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.screening.FoodScreeningActivity"
+    android:background="@color/white">
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="30dp">
+
+            <ImageButton
+                android:id="@+id/foodscreening_button_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                android:backgroundTint="@android:color/transparent"
+                android:layout_marginTop="18dp"
+                android:layout_marginLeft="16dp"/>
+            <TextView
+                android:id="@+id/foodscreening_textview_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/foodscreening_button_back"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="Seperti apa"
+                android:fontFamily="@font/roboto_w500_medium"
+                android:textSize="32sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/foodscreening_textview_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/foodscreening_textview_1"
+                android:layout_marginLeft="36dp"
+                android:text="makananmu ?"
+                android:fontFamily="@font/roboto_w700_bold"
+                android:textSize="32sp"
+                android:textColor="@color/app_green"/>
+
+            <TextView
+                android:id="@+id/foodscreening_textview_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/foodscreening_textview_2"
+                android:layout_marginLeft="36dp"
+                android:text="Pilih seorang apa kamu dan hilangkan makanan yang tidak\nkamu suka atau membuat kamu alergi."
+                android:fontFamily="@font/roboto_w400_regular"
+                android:textSize="10sp"
+                android:layout_marginTop="20dp"
+                android:textColor="#99000000"
+                android:letterSpacing="0.04"/>
+
+            <TextView
+                android:id="@+id/foodscreening_textview_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/foodscreening_textview_3"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="Kamu seorang apa?"
+                android:fontFamily="@font/roboto_w400_regular"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="32dp"
+                android:paddingBottom="5dp"
+                android:letterSpacing="0.08"/>
+
+            <RadioGroup
+                android:id="@+id/foodscreening_radiogrup_foodtype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/foodscreening_textview_4"
+                android:layout_marginLeft="36dp"
+                android:layout_marginRight="36dp"
+                android:background="@drawable/outlinedbox_inputlayout">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="3"
+                    android:alignmentMode="alignBounds">
+
+                    <RadioButton
+                        android:id="@+id/foodscreening_radiobutton_apasaja"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Apa saja"
+                        android:button="@null"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="fill"
+                        android:gravity="center"
+                        android:background="@drawable/outlinedbox_appgreen"
+                        android:fontFamily="@font/poppins_w400_regular"
+                        android:textSize="13sp"
+                        android:textColor="@color/white"/>
+
+                    <RadioButton
+                        android:id="@+id/foodscreening_radiobutton_paleo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Paleo"
+                        android:button="@null"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="fill"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppins_w400_regular"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"/>
+
+                    <RadioButton
+                        android:id="@+id/foodscreening_radiobutton_vegetarian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vegetarian"
+                        android:button="@null"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="fill"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppins_w400_regular"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"/>
+
+                    <RadioButton
+                        android:id="@+id/foodscreening_radiobutton_vegan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vegan"
+                        android:button="@null"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="fill"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppins_w400_regular"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"/>
+
+                    <RadioButton
+                        android:id="@+id/foodscreening_radiobutton_ketogenik"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ketogenik"
+                        android:button="@null"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="fill"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppins_w400_regular"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"/>
+
+                    <RadioButton
+                        android:id="@+id/foodscreening_radiobutton_mediterania"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mediterania"
+                        android:button="@null"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="fill"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppins_w400_regular"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"/>
+
+                </GridLayout>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/foodscreening_textview_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/foodscreening_radiogrup_foodtype"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="Kamu punya pantangan ?"
+                android:fontFamily="@font/roboto_w400_regular"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="32dp"
+                android:paddingBottom="5dp"
+                android:letterSpacing="0.08"/>
+
+            <TextView
+                android:id="@+id/foodscreening_textview_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/foodscreening_textview_5"
+                android:layout_marginLeft="36dp"
+                android:text="Pilih sampai tercoret garis merah."
+                android:fontFamily="@font/roboto_w400_regular"
+                android:textSize="10sp"
+                android:layout_marginTop="3dp"
+                android:textColor="#99000000"
+                android:letterSpacing="0.04"/>
+
+            <GridLayout
+                android:id="@+id/foodscreening_gridlayout_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/foodscreening_textview_6"
+                android:columnCount="3"
+                android:alignmentMode="alignBounds"
+                android:padding="8dp"
+                android:layout_marginHorizontal="36dp"
+                android:useDefaultMargins="true"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/outlinedbox_inputlayout"
+                >
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/foodscreening_checkbox_telur"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:gravity="center"-->
+<!--                    android:button="@null"-->
+<!--                    android:text="Telur"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@drawable/outlinedbox_inputlayout"/>-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/foodscreening_checkbox_kerang"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:gravity="center"-->
+<!--                    android:button="@null"-->
+<!--                    android:text="Kerang"-->
+<!--                    android:background="@drawable/outlinedbox_inputlayout"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textColor="@color/black"/>-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/foodscreening_checkbox_kacangpohon"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:gravity="center"-->
+<!--                    android:button="@null"-->
+<!--                    android:text="Kacang Pohon"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@drawable/outlinedbox_inputlayout"/>-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/foodscreening_checkbox_susu"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:gravity="center"-->
+<!--                    android:button="@null"-->
+<!--                    android:text="Susu"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@drawable/outlinedbox_inputlayout"/>-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/foodscreening_checkbox_ikan"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:gravity="center"-->
+<!--                    android:button="@null"-->
+<!--                    android:text="Ikan"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@drawable/outlinedbox_inputlayout"/>-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/foodscreening_checkbox_gluten"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:gravity="center"-->
+<!--                    android:button="@null"-->
+<!--                    android:text="Gluten"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@drawable/outlinedbox_inputlayout"/>-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/foodscreening_checkbox_kedelai"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:gravity="center"-->
+<!--                    android:button="@null"-->
+<!--                    android:text="Kedelai"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@drawable/outlinedbox_inputlayout"/>-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/foodscreening_checkbox_kacang"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:gravity="center"-->
+<!--                    android:button="@null"-->
+<!--                    android:text="Kacang"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@drawable/outlinedbox_inputlayout"/>-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/foodscreening_checkbox_dagingmerah"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:gravity="center"-->
+<!--                    android:button="@null"-->
+<!--                    android:text="Daging Merah"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@drawable/outlinedbox_inputlayout"/>-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/foodscreening_checkbox_dagingsapi"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:gravity="center"-->
+<!--                    android:button="@null"-->
+<!--                    android:text="Daging Sapi"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@drawable/outlinedbox_inputlayout"/>-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/foodscreening_checkbox_pasta"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:gravity="center"-->
+<!--                    android:button="@null"-->
+<!--                    android:text="Pasta"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@drawable/outlinedbox_inputlayout"/>-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/foodscreening_checkbox_salmon"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:gravity="center"-->
+<!--                    android:button="@null"-->
+<!--                    android:text="Salmon"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@drawable/outlinedbox_inputlayout"/>-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/foodscreening_checkbox_ayam"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:gravity="center"-->
+<!--                    android:button="@null"-->
+<!--                    android:text="Ayam"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@drawable/outlinedbox_inputlayout"/>-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/foodscreening_checkbox_roti"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:gravity="center"-->
+<!--                    android:button="@null"-->
+<!--                    android:text="Roti"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@drawable/outlinedbox_inputlayout"/>-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/foodscreening_checkbox_nasi"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:gravity="center"-->
+<!--                    android:button="@null"-->
+<!--                    android:text="Nasi"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@drawable/outlinedbox_inputlayout"/>-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/foodscreening_checkbox_oatmeal"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:gravity="center"-->
+<!--                    android:button="@null"-->
+<!--                    android:text="Oatmeal"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@drawable/outlinedbox_inputlayout"/>-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/foodscreening_checkbox_gula"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:gravity="center"-->
+<!--                    android:button="@null"-->
+<!--                    android:text="Gula"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@drawable/outlinedbox_inputlayout"/>-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/foodscreening_checkbox_kentang"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:gravity="center"-->
+<!--                    android:button="@null"-->
+<!--                    android:text="Kentang"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@drawable/outlinedbox_inputlayout"/>-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/foodscreening_checkbox_jagung"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:gravity="center"-->
+<!--                    android:button="@null"-->
+<!--                    android:text="Jagung"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@drawable/outlinedbox_inputlayout"/>-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/foodscreening_checkbox_sayuran"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:gravity="center"-->
+<!--                    android:button="@null"-->
+<!--                    android:text="Sayuran"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@drawable/outlinedbox_inputlayout"/>-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/foodscreening_checkbox_asparagus"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:gravity="center"-->
+<!--                    android:button="@null"-->
+<!--                    android:text="Asparagus"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@drawable/outlinedbox_inputlayout"/>-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/foodscreening_checkbox_alpukat"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:gravity="center"-->
+<!--                    android:button="@null"-->
+<!--                    android:text="Alpukat"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@drawable/outlinedbox_inputlayout"/>-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/foodscreening_checkbox_kacangalmond"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:gravity="center"-->
+<!--                    android:button="@null"-->
+<!--                    android:text="Kacang Almond"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@drawable/outlinedbox_inputlayout"/>-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/foodscreening_checkbox_krim"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:gravity="center"-->
+<!--                    android:button="@null"-->
+<!--                    android:text="Krim"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@drawable/outlinedbox_inputlayout"/>-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/foodscreening_checkbox_keju"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:gravity="center"-->
+<!--                    android:button="@null"-->
+<!--                    android:text="Keju"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@drawable/outlinedbox_inputlayout"/>-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/foodscreening_checkbox_yogurt"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:gravity="center"-->
+<!--                    android:button="@null"-->
+<!--                    android:text="Yogurt"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@drawable/outlinedbox_inputlayout"/>-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/foodscreening_checkbox_bubukwhey"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:gravity="center"-->
+<!--                    android:button="@null"-->
+<!--                    android:text="Bubuk Whey"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@drawable/outlinedbox_inputlayout"/>-->
+
+            </GridLayout>
+
+            <TextView
+                android:id="@+id/foodscreening_textview_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/foodscreening_gridlayout_1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="Batas harga harian"
+                android:fontFamily="@font/roboto_w400_regular"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="32dp"
+                android:paddingBottom="5dp"
+                android:letterSpacing="0.08"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/foodscreening_inputlayout_1"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/foodscreening_textview_7"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="36dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                app:boxStrokeColor="#33000000"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeWidth="1.5dp"
+                app:endIconTint="#66000000">
+
+                <AutoCompleteTextView
+                    android:id="@+id/foodscreening_autocompletetextview_batasharian"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:text="Tidak ada batas"
+                    android:fontFamily="@font/poppins_w400_regular"
+                    android:textSize="11sp"
+                    android:textColor="@color/black"
+                    android:paddingLeft="7dp"/>
+<!--                <AutoCompleteTextView-->
+<!--                    android:id="@+id/foodscreening_autocompletetextview_15_25"-->
+<!--                    android:layout_width="200dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:inputType="none"-->
+<!--                    android:text="Rp 15.000 - Rp 25.000"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="11sp"-->
+<!--                    android:textColor="@color/black"/>-->
+<!--                <AutoCompleteTextView-->
+<!--                    android:id="@+id/foodscreening_autocompletetextview_26_35"-->
+<!--                    android:layout_width="200dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:inputType="none"-->
+<!--                    android:text="Rp 26.000 - Rp 35.000"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="11sp"-->
+<!--                    android:textColor="@color/black"/>-->
+<!--                <AutoCompleteTextView-->
+<!--                    android:id="@+id/foodscreening_autocompletetextview_36_45"-->
+<!--                    android:layout_width="200dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:inputType="none"-->
+<!--                    android:text="Rp 36.000 - Rp 45.000"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="11sp"-->
+<!--                    android:textColor="@color/black"/>-->
+<!--                <AutoCompleteTextView-->
+<!--                    android:id="@+id/foodscreening_autocompletetextview_46_55"-->
+<!--                    android:layout_width="200dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:inputType="none"-->
+<!--                    android:text="Rp 46.000 - Rp 55.000"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="11sp"-->
+<!--                    android:textColor="@color/black"/>-->
+<!--                <AutoCompleteTextView-->
+<!--                    android:id="@+id/foodscreening_autocompletetextview_56_60"-->
+<!--                    android:layout_width="200dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:inputType="none"-->
+<!--                    android:text="Rp 56.000 - Rp 60.000"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="11sp"-->
+<!--                    android:textColor="@color/black"/>-->
+<!--                <AutoCompleteTextView-->
+<!--                    android:id="@+id/foodscreening_autocompletetextview_60up"-->
+<!--                    android:layout_width="200dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:inputType="none"-->
+<!--                    android:text="Rp 60.000 ke atas"-->
+<!--                    android:fontFamily="@font/poppins_w400_regular"-->
+<!--                    android:textSize="11sp"-->
+<!--                    android:textColor="@color/black"/>-->
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/foodscreening_imagebutton_nextarrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="100dp"
+                app:layout_constraintTop_toBottomOf="@id/foodscreening_inputlayout_1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:background="@drawable/round_green_shape"
+                android:layout_marginVertical="42dp"
+                android:layout_marginHorizontal="36dp"
+                android:text="Selanjutnya"
+                android:fontFamily="@font/roboto_w400_regular"
+                android:textSize="14sp"
+                android:letterSpacing="0.08"
+                android:textAllCaps="false"
+                android:gravity="center"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

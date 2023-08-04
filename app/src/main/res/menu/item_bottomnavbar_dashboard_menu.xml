@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/dashboard_bottomnav_itemlike"
+        android:title="Like"
+        android:icon="@drawable/ic_heart_regular" />
+
+    <item android:id="@+id/dashboard_bottomnav_itemCalendar"
+        android:title="Calendar"
+        android:icon="@drawable/ic_calendar" />
+
+    <item android:id="@+id/dashboard_bottomnav_itemHome"
+        android:title="Home"
+        android:icon="@drawable/ic_home"/>
+
+<!--    <item android:id="@+id/dashboard_bottomnav_itemCamera"-->
+<!--        android:title="Camera"-->
+<!--        android:icon="@drawable/ic_camera"/>-->
+
+    <item android:id="@+id/dashboard_bottomnav_itemCheckbox"
+        android:title="Checkbox"
+        android:icon="@drawable/ic_checkbox_regular"/>
+
+</menu>

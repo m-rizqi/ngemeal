@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.view.screening.NutritionCalculatorActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="30dp">
+
+            S<ImageButton
+                android:id="@+id/nutritioncalculator_imagebutton_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                android:backgroundTint="@android:color/transparent"
+                android:layout_marginTop="18dp"
+                android:layout_marginLeft="16dp"/>
+
+            <TextView
+                android:id="@+id/nutritioncalculator_textview_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/nutritioncalculator_imagebutton_back"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text="Kalkulator Nutrisi"
+                android:fontFamily="@font/roboto_w500_medium"
+                android:textSize="32sp"
+                android:textColor="#CC000000"
+                android:layout_marginTop="8dp"
+                android:letterSpacing="0.02"/>
+
+            <LinearLayout
+                android:id="@+id/nutritioncalculator_linearlayout_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/nutritioncalculator_textview_1"
+                android:layout_marginTop="36dp"
+                android:layout_marginHorizontal="36dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="Saya seorang"
+                    android:fontFamily="@font/roboto_w400_regular"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:letterSpacing="0.08"/>
+
+                <RadioGroup
+                    android:id="@+id/nutritioncalculator_radiogrup_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/outlinedbox_inputlayout"
+                    android:orientation="horizontal"
+                    android:layout_weight="6">
+                    <RadioButton
+                        android:id="@+id/nutritioncalculator_radiobutton_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_w400_regular"
+                        android:paddingHorizontal="12dp"
+                        android:text="Laki-Laki"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:button="@null"/>
+
+                    <RadioButton
+                        android:id="@+id/nutritioncalculator_radiobutton_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="12dp"
+                        android:text="Perempuan"
+                        android:fontFamily="@font/poppins_w400_regular"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:button="@null"/>
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="Target berat badan"
+                    android:fontFamily="@font/roboto_w400_regular"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:letterSpacing="0.08"
+                    android:layout_marginTop="24dp"/>
+
+                <RadioGroup
+                    android:id="@+id/nutritioncalculator_radiogrup_weighttarget"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/outlinedbox_inputlayout"
+                    android:orientation="horizontal"
+                    android:layout_weight="9">
+                    <RadioButton
+                        android:id="@+id/nutritioncalculator_radiobutton_turun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_w400_regular"
+                        android:paddingHorizontal="12dp"
+                        android:text="Turun"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:button="@null"/>
+
+                    <RadioButton
+                        android:id="@+id/nutritioncalculator_radiobutton_tetap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="12dp"
+                        android:text="Tetap"
+                        android:fontFamily="@font/poppins_w400_regular"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:button="@null"/>
+
+                    <RadioButton
+                        android:id="@+id/nutritioncalculator_radiobutton_naik"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="12dp"
+                        android:text="Naik"
+                        android:fontFamily="@font/poppins_w400_regular"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:button="@null"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/nutritioncalculator_relativelayout_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/nutritioncalculator_linearlayout_1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="36dp"
+                android:layout_marginRight="36dp"
+                android:layout_marginTop="24dp">
+
+                <LinearLayout
+                    android:id="@+id/nutritioncalculator_linearlayout_height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentLeft="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_w400_regular"
+                        android:letterSpacing="0.08"
+                        android:text="Tinggi"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/outlinedbox_inputlayout">
+
+                        <EditText
+                            android:id="@+id/nutritioncalculator_edittext_height"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/roboto_w400_regular"
+                            android:textSize="12sp"
+                            android:inputType="number"
+                            android:layout_marginLeft="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="cm"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/roboto_w400_regular"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentRight="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Usia"
+                        android:fontFamily="@font/roboto_w400_regular"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:letterSpacing="0.08"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/outlinedbox_inputlayout">
+
+                        <EditText
+                            android:id="@+id/nutritioncalculator_edittext_age"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/roboto_w400_regular"
+                            android:textSize="12sp"
+                            android:inputType="number"
+                            android:layout_marginLeft="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="th"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/roboto_w400_regular"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="25dp"
+                    android:layout_below="@id/nutritioncalculator_linearlayout_height">
+
+                    <TextView
+                        android:id="@+id/biodata_textview_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Berat badan"
+                        android:fontFamily="@font/roboto_w400_regular"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:letterSpacing="0.08"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/outlinedbox_inputlayout">
+
+                        <EditText
+                            android:id="@+id/nutritioncalculator_edittext_weight"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/roboto_w400_regular"
+                            android:textSize="12sp"
+                            android:inputType="number"
+                            android:layout_marginLeft="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="kg"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/roboto_w400_regular"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/nutritioncalculator_textview_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/nutritioncalculator_relativelayout_2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/roboto_w400_regular"
+                android:letterSpacing="0.08"
+                android:text="Body Mass Index (BMI)"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <RadioGroup
+                android:id="@+id/nutritioncalculator_radiogrup_bmi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/nutritioncalculator_textview_4"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="36dp"
+                android:background="@drawable/outlinedbox_inputlayout"
+                android:orientation="horizontal"
+                android:layout_weight="12">
+                <RadioButton
+                    android:id="@+id/nutritioncalculator_radiobutton_bmirendah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_w400_regular"
+                    android:paddingHorizontal="12dp"
+                    android:text="Rendah"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:button="@null"/>
+
+                <RadioButton
+                    android:id="@+id/nutritioncalculator_radiobutton_bmiideal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="12dp"
+                    android:text="Ideal"
+                    android:fontFamily="@font/poppins_w400_regular"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:button="@null"/>
+
+                <RadioButton
+                    android:id="@+id/nutritioncalculator_radiobutton_bmitinggi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="12dp"
+                    android:text="Tinggi"
+                    android:fontFamily="@font/poppins_w400_regular"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:button="@null"/>
+
+                <RadioButton
+                    android:id="@+id/nutritioncalculator_radiobutton_bmiobesitas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="12dp"
+                    android:text="Obesitas"
+                    android:fontFamily="@font/poppins_w400_regular"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:button="@null"/>
+
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/nutritioncalculator_textview_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/nutritioncalculator_radiogrup_bmi"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/roboto_w400_regular"
+                android:letterSpacing="0.08"
+                android:text="Tingkat aktivitas"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:id="@+id/nutritioncalculator_linearlayout_aktivitas"
+                app:layout_constraintTop_toBottomOf="@id/nutritioncalculator_textview_5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="36dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/outlinedbox_inputlayout"
+                android:orientation="horizontal"
+                android:layout_weight="9">
+
+                <LinearLayout
+                    android:id="@+id/nutritioncalculator_linearlayout_aktivitastidakada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="12dp"
+                    android:gravity="center"
+                    android:layout_weight="3">
+
+                    <TextView
+                        android:id="@+id/nutritioncalculator_textview_tidakada"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tidak ada"
+                        android:fontFamily="@font/poppins_w400_regular"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(tidak berolahraga)"
+                        android:fontFamily="@font/poppins_w400_regular"
+                        android:textSize="8sp"
+                        android:textColor="#99000000" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/nutritioncalculator_linearlayout_aktivitassedang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="12dp"
+                    android:gravity="center"
+                    android:layout_weight="3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sedang"
+                        android:fontFamily="@font/poppins_w400_regular"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(3x-4x/minggu)"
+                        android:fontFamily="@font/poppins_w400_regular"
+                        android:textSize="8sp"
+                        android:textColor="#99000000" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/nutritioncalculator_linearlayout_aktivitasaktif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="12dp"
+                    android:gravity="center"
+                    android:layout_weight="3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Aktif"
+                        android:fontFamily="@font/poppins_w400_regular"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(5x+/minggu)"
+                        android:fontFamily="@font/poppins_w400_regular"
+                        android:textSize="8sp"
+                        android:textColor="#99000000" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/nutritioncalculator_imagebutton_nextarrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="100dp"
+                app:layout_constraintTop_toBottomOf="@id/nutritioncalculator_linearlayout_aktivitas"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:background="@drawable/round_green_shape"
+                android:layout_marginVertical="42dp"
+                android:layout_marginHorizontal="36dp"
+                android:text="Hitung"
+                android:fontFamily="@font/roboto_w400_regular"
+                android:textSize="14sp"
+                android:letterSpacing="0.08"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:visibility="visible"/>
+
+            <LinearLayout
+                android:id="@+id/nutritioncalculator_linearlayout_resultofhitung"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/nutritioncalculator_linearlayout_aktivitas"
+                android:orientation="vertical"
+                android:layout_marginVertical="42dp"
+                android:layout_marginHorizontal="36dp"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#33000000"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Saran Kalori"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_w500_medium"
+                        android:textSize="14sp"
+                        android:layout_alignParentLeft="true"/>
+
+                    <TextView
+                        android:id="@+id/nutritioncalculator_textview_sarankalori"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="36 kal"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_w500_medium"
+                        android:textSize="14sp"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Karbohidrat"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_w500_medium"
+                        android:textSize="14sp"
+                        android:layout_alignParentLeft="true"/>
+
+                    <TextView
+                        android:id="@+id/nutritioncalculator_textview_sarankarbohidrat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 g - 40 g"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_w500_medium"
+                        android:textSize="14sp"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lemak"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_w500_medium"
+                        android:textSize="14sp"
+                        android:layout_alignParentLeft="true"/>
+
+                    <TextView
+                        android:id="@+id/nutritioncalculator_textview_saranlemak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 g - 40 g"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_w500_medium"
+                        android:textSize="14sp"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Saran Kalori"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_w500_medium"
+                        android:textSize="14sp"
+                        android:layout_alignParentLeft="true"/>
+
+                    <TextView
+                        android:id="@+id/nutritioncalculator_textview_saranprotein"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 g - 40 g"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_w500_medium"
+                        android:textSize="14sp"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/nutritioncalculator_imagebutton_terapkansaran"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="75dp"
+                    app:layout_constraintTop_toBottomOf="@id/nutritioncalculator_linearlayout_aktivitas"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:background="@drawable/round_green_shape"
+                    android:layout_marginVertical="17dp"
+                    android:text="Terapkan saran"
+                    android:fontFamily="@font/roboto_w400_regular"
+                    android:textSize="14sp"
+                    android:letterSpacing="0.08"
+                    android:textAllCaps="false"
+                    android:layout_gravity="center_horizontal"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
